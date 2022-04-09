@@ -10,6 +10,7 @@ import Home from "../page/home";
 import Login from "../page/login";
 import Manage from "../page/manage";
 import Message from "../page/message";
+import TaskLog from "../page/taskLog";
 // RequireAuth 组件相当于一个拦截器，是否返回被拦截的组件要听他的
 function RequireAuth({ children }) {
   const authed = localStorage.getItem("x-auth-token");
@@ -36,6 +37,7 @@ export default function IRouter() {
                 <Route path="app" element={<App />}></Route>
                 <Route path="manage" element={<Manage />}></Route>
                 <Route path="message" element={<Message />}></Route>
+                <Route path="manage/tasklog" element={<TaskLog />}></Route>
               </Routes>
             </RequireAuth>
           }

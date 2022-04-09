@@ -15,6 +15,7 @@ function Toast(props) {
     <Alert
       style={{ display: props.showToast ? "flex" : "none" }}
       severity={props.type}
+      className="Toast"
     >
       {props.content}
     </Alert>

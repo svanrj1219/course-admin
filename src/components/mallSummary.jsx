@@ -22,9 +22,9 @@ function MallSummary(props) {
         {
           name: "Access From",
           type: "pie",
-          radius: ["40%", "70%"],
+          radius: ["40%", "60%"],
           itemStyle: {
-            borderRadius: 10,
+            borderRadius: 0,
             borderColor: "#fff",
             borderWidth: 2,
           },
@@ -53,7 +53,6 @@ function MallSummary(props) {
           series.push({ value: e.count, name: e.name });
         }
       });
-      console.log(series);
       setOption(series);
     });
   }, []);

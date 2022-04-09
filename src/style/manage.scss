@@ -1,0 +1,46 @@
+.MuiPaper-root {
+  position: relative;
+  width: 96%;
+}
+.MuiList-root,
+.marage-list {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.manage {
+  margin-top: 20px;
+  padding-top: 10px;
+  .title {
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2962ff;
+  }
+}
+.class {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600px;
+  .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 18px;
+  }
+  img {
+    width: 45px;
+  }
+  span {
+    padding: 10px 0;
+    font-weight: 500;
+  }
+}

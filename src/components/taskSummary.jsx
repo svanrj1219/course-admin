@@ -22,9 +22,8 @@ function TaskSummary(props) {
         {
           name: "Access From",
           type: "pie",
-          radius: ["40%", "70%"],
+          radius: ["45%", "65%"],
           itemStyle: {
-            borderRadius: 10,
             borderColor: "#fff",
             borderWidth: 2,
           },

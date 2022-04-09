@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
+import Badge from "@mui/material/Badge";
 import "../style/tabbar.scss";
 import shuju from "../assets/icon/shuju.png";
 import shoucang from "../assets/icon/shoucang.png";
@@ -8,12 +9,17 @@ import yonghu from "../assets/icon/yonghu.png";
 import youjian from "../assets/icon/youjian.png";
 import { useNavigate } from "react-router-dom";
 import withRouter from "../router/withRouter";
+import { GetUnconverted } from "../request/api";
 
 function Tabbar(props) {
   const [value, setValue] = React.useState("1");
+  const [count, setCount] = React.useState();
   const navigate = useNavigate();
 
   useEffect(() => {
+    GetUnconverted().then((res) => {
+      setCount(res.data.count);
+    });
     switch (props.location.pathname) {
       case "/home":
         setValue("4");
@@ -64,23 +70,27 @@ function Tabbar(props) {
         label="首页"
         value="1"
         to="/"
-        icon={<img src={shuju} alt="" style={{ width: 30 }} />}
+        icon={<img src={shuju} alt="" style={{ width: 35 }} />}
       />
       <BottomNavigationAction
         label="内容管理"
         value="2"
         to="/home"
-        icon={<img src={shoucang} alt="" style={{ width: 30 }} />}
+        icon={<img src={shoucang} alt="" style={{ width: 35 }} />}
       />
       <BottomNavigationAction
         label="通知"
         value="3"
-        icon={<img src={youjian} alt="" style={{ width: 30 }} />}
+        icon={
+          <Badge badgeContent={count} color="primary">
+            <img src={youjian} alt="" style={{ width: 35 }} />
+          </Badge>
+        }
       />
       <BottomNavigationAction
         label="我的"
         value="4"
-        icon={<img src={yonghu} alt="" style={{ width: 30 }} />}
+        icon={<img src={yonghu} alt="" style={{ width: 35 }} />}
       />
     </BottomNavigation>
   );
