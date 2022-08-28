@@ -13,10 +13,14 @@ export const GetUnconverted = () => request.get("/admin/unconverted");
 
 export const GettaskLog = () => request.get("/admin/taskLog");
 
+export const GetAllTask = () => request.get("/admin/task");
+
 export const GetMallLog = () => request.get("/admin/mallLog");
 
+export const Course = (params) => request.post("/admin/course", params);
+
 export const UpdateUnconverted = (params) =>
-  request.put("/admin/unconverted/"+ params.id);
+    request.put("/admin/unconverted/" + params.id);
 
 // 登录接口
 export const LoginApi = (params) => request.post("/login", params);

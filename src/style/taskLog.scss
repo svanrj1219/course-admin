@@ -3,9 +3,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
     padding: 5px;
     border-bottom: 1px solid #e0e0e0;
+    box-shadow: 1px 1px 5px #ccc;
+    margin: 10px 0;
+    border-radius: 10px;
+    position: relative;
     .left,
     .right {
       padding: 0 15px;
@@ -37,6 +41,20 @@
         padding-left: 5px;
         font-weight: 550;
       }
+    }
+    .status{
+      position: absolute;
+      right: -12px;
+      top: -10px;
+      background-color: #4caf50;
+      padding: 5px;
+      border-radius: 8px;
+      color: #fff;
+      opacity: .9;
+      box-shadow: 1px 1px 5px #ccc ;
+    }
+    .not-status{
+      background-color: #f44336;
     }
   }
 }

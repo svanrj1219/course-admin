@@ -23,7 +23,7 @@ function Message(props) {
       );
       setTimeout(() => {
         window.location.reload();
-      }, 1500);
+      }, 500);
     });
   };
   useEffect(() => {

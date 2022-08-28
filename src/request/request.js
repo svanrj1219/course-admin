@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: "http://127.0.0.1:8080/", // 通过使用配置的proxy来解决跨域
-  timeout: 10000,
+  baseURL: "http://1.15.144.204:8080", // 通过使用配置的proxy来解决跨域
+  timeout: 2000,
 });
 
 // 添加请求拦截器

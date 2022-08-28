@@ -28,7 +28,9 @@ export default function Manage() {
               <img src={classInfo} alt="" />
               <span>课程查看</span>
             </div>
-            <div className="item">
+            <div className="item" onClick={()=>{
+              return Navigate("/manage/addCourse")
+            }}>
               <img src={add} alt="" />
               <span>添加课程</span>
             </div>
@@ -37,7 +39,9 @@ export default function Manage() {
         <Card className="manage">
           <span className="title">积分商城</span>
           <div className="class">
-            <div className="item">
+            <div className="item"  onClick={()=>{
+              return Navigate("/manage/task")
+            }}>
               <img src={task} alt="" />
               <span>任务查看</span>
             </div>
@@ -51,7 +55,9 @@ export default function Manage() {
               <img src={tasklog} alt="" />
               <span>任务日志</span>
             </div>
-            <div className="item">
+            <div className="item"  onClick={()=>{
+              return Navigate("/manage/mallLog")
+            }}>
               <img src={malllog} alt="" />
               <span>兑换日志</span>
             </div>

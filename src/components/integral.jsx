@@ -4,7 +4,7 @@ import ReactEcharts from "echarts-for-react";
 import { Card } from "@mui/material";
 import { GetHistoryJf } from "../request/api";
 
-function Integral(props) {
+function Integral() {
   const [optiop, setOption] = useState({});
   const getOption = () => {
     let option = {
@@ -71,9 +71,9 @@ function Integral(props) {
       res.data.forEach((e) => {
         yAxis.push(e.name);
         series.push(e.jf);
-        options.xAxis.max = e.jf + 100;
+        options.xAxis.max = e.jf + 1000;
         if (e.jf > options.xAxis.max) {
-          options.xAxis.max = e.jf + 100;
+          options.xAxis.max = e.jf + 1000;
         }
       });
       options.yAxis.data = yAxis;

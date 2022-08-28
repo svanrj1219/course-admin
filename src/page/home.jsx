@@ -1,19 +1,20 @@
-import React, { useState } from "react";
-import { Button } from "antd";
+import React from "react";
 import Tabbar from "../components/tabbar";
+import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
+import "../style/home.scss";
 
 export default function Home() {
-  var [count, setCount] = useState(0);
+  const navigate = useNavigate();
 
+  const exit = () => {
+    localStorage.clear();
+    navigate("/login");
+  };
   return (
     <div className="home">
-      <p>{count}</p>
-      <Button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        增加
+      <Button variant="contained" onClick={exit}>
+        退出
       </Button>
       <Tabbar></Tabbar>
     </div>
